@@ -1,0 +1,186 @@
+/* Design Variables */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #4f46e5;
+    --card-bg: #f9fafb;
+    --border-color: #e5e7eb;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --primary-color: #818cf8;
+    --card-bg: #1e293b;
+    --border-color: #334155;
+}
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header & Nav */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-right: 1.5rem;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    opacity: 0.8;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn.secondary {
+    background: none;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    margin-left: 0.5rem;
+}
+
+/* Projects Section */
+.projects-section, .contact-section {
+    padding: 5rem 10%;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.project-card h3 {
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.tags {
+    margin-bottom: 1.5rem;
+}
+
+.tags span {
+    background-color: var(--border-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-right: 0.5rem;
+}
+
+.project-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+    background-color: var(--card-bg);
+}
+
+.contact-section p {
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+    opacity: 0.7;
+}
