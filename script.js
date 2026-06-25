@@ -1,26 +1,28 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
+const themeToggleBtn = document.getElementById('theme-toggle');
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remove active status from previous buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+// Check for saved theme preference, otherwise use system preference
+const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
-            const filterValue = button.getAttribute('data-filter');
+// Apply the initial theme
+if (currentTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    themeToggleBtn.textContent = '☀️';
+} else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    themeToggleBtn.textContent = '🌙';
+}
 
-            portfolioItems.forEach(item => {
-                const itemCategory = item.getAttribute('data-category');
-
-                if (filterValue === 'all' || itemCategory === filterValue) {
-                    item.classList.remove('card-hidden');
-                    item.classList.add('card-visible');
-                } else {
-                    item.classList.add('card-hidden');
-                    item.classList.remove('card-visible');
-                }
-            });
-        });
-    });
+// Switch theme function
+themeToggleBtn.addEventListener('click', () => {
+    let theme = document.documentElement.getAttribute('data-theme');
+    
+    if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        themeToggleBtn.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeToggleBtn.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+    }
 });
