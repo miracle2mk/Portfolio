@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mikiyas Bayew | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -18,7 +19,6 @@
             <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
         </nav>
     </header>
-
     <!-- Hero Greeting Section -->
       <section class="hero" style="height: auto; min-height: 70vh; padding: 4rem 10%;">
         <div class="hero-container" style="display: flex; align-items: center; justify-content: space-between; gap: 4rem; width: 100%; max-width: 1200px; margin: 0 auto; text-align: left;">
@@ -80,7 +80,7 @@
 
             <!-- Project 2: BSc -->
             <div class="project-card">
-                <div class="tags"><span>BSc Graduation Project</span></div>
+                <div class="tags"><span style="background: var(--primary-color); color: #fff;"> BSc Graduation Project</span></div>
                 <h3 style="margin-top: 0.5rem;">Real Estate Recommendation System</h3>
                 <p>Designed and built an intelligent multi-criteria filtering engine to generate data-driven property matches and streamline transaction discovery algorithms for target markets.</p>
                 <div class="tags">
@@ -91,7 +91,7 @@
 
             <!-- Project 3: Advising -->
             <div class="project-card">
-                <div class="tags"><span>Project Mentorship</span></div>
+                <div class="tags"><span style="background: var(--primary-color); color: #fff;">Project Mentorship</span></div>
                 <h3 style="margin-top: 0.5rem;">Advising Multiple Projects: E-commerce</h3>
                 <p>Providing technical steering, architectural supervision, and structural code review for multiple engineering cohorts building modern high-scale digital commerce portals.</p>
                 <div class="tags">
@@ -102,7 +102,7 @@
 
             <!-- Project 4: Core Systems -->
             <div class="project-card">
-                <div class="tags"><span>Core Systems Integration</span></div>
+                <div class="tags"><span style="background: var(--primary-color); color: #fff;">Core Systems Integration</span></div>
                 <h3 style="margin-top: 0.5rem;">Rate-Limiting Subsystem &amp; Parsers</h3>
                 <p>Architected environment-level traffic governors implementing standard method controls, transaction safety structures, and nested object data parsing engines for underlying enterprise flows.</p>
                 <div class="tags">
@@ -110,6 +110,47 @@
                 </div>
                 <a href="#" class="project-link">View Components &rarr;</a>
             </div>
+
+            <div class="project-card reveal">
+    <div class="project-header" style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <span style="font-size: 1.5rem; color: var(--primary-color);"><i class="fas fa-network-wired"></i></span>
+        <span style="font-size: 0.75rem; font-family: monospace; text-transform: uppercase; letter-spacing: 1px; color: var(--primary-color); background: rgba(59, 130, 246, 0.1); padding: 2px 8px; border-radius: 4px;">Enterprise API</span>
+    </div>
+    
+    <h3>Secure Core Banking API Gateway</h3>
+    <p>
+        Architected and deployed a high-performance RESTful API gateway integrated within a Temenos T24 middleware ecosystem. Engineered resilient transaction pipelines capable of processing high-volume concurrent payloads with strict runtime stability. Implemented deep nested JSON parsing models alongside strict HTTP method restrictions and secure error boundaries to eliminate stack trace exposure.
+    </p>
+    
+    <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem 0; font-size: 0.9rem; color: var(--text-secondary);">
+        <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-shield-alt" style="color: #10b981; font-size: 0.8rem;"></i> 
+            Token-bucket rate limiting applied globally to prevent system degradation.
+        </li>
+        <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-exchange-alt" style="color: #10b981; font-size: 0.8rem;"></i> 
+            Thread-safe data mapping transforming legacy data formats to clean JSON arrays.
+        </li>
+        <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-chart-line" style="color: #10b981; font-size: 0.8rem;"></i> 
+            Proactive monitoring systems to track connection dropouts during peak loads.
+        </li>
+    </ul>
+
+    <div class="tags">
+        <span>Java</span>
+        <span>jBASE</span>
+        <span>API Lifecycle</span>
+        <span>Temenos T24</span>
+        <span>REST Architecture</span>
+    </div>
+    
+    <a href="#contact" class="project-link" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+        Request Architecture Overview <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i>
+    </a>
+</div>
+
+            
 
         </div>
     </section>
@@ -126,9 +167,29 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Mikiyas Bayew</p>
-    </footer>
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+            
+            <div class="social-links" style="display: flex; gap: 2rem; font-size: 1.5rem;">
+                <a href="https://miracle2mk.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); transition: color 0.2s ease;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/mikiyas-b-48b621132" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); transition: color 0.2s ease;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://x.com/yourusername" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); transition: color 0.2s ease;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'" aria-label="Twitter Profile">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
 
+                <a href="mailto:your.email@example.com" style="color: var(--text-secondary); transition: color 0.2s ease;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-secondary)'" aria-label="Email Contact">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <p style="margin: 0;">&copy; 2026 Mikiyas Bayew. All rights reserved.</p>
+            
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
